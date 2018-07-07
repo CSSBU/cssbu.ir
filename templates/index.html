@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <title>انجمن دانشجویی علوم کامپیوتر</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <link rel="stylesheet" href="{% static 'plugins/IranSans/css/fontstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+<div class="row row-1">
+    <div class="logo-news">
+        <div class="logo">
+            <div class="logo-img">
+                <img src="{% static 'images/logo.png' %}" alt="">
+            </div>
+            <div class="logo-txt">انجمن علمی علوم کامپیوتر <span>دانشگاه شهید بهشتی </span></div>
+        </div>
+        <div class="news"></div>
+    </div>
+
+    <div class="slider-bigbox">
+        <div class="slider-">
+            <div class="slider">
+                <div data-role="carousel"
+                     data-cls-bullet="bullet-big"
+                     data-auto-start="true"
+                     data-cls-controls="fg-white"
+                     data-bullets-position="center"
+                     data-control-next="<span class='mif-chevron-right fg-cyan'></span>"
+                     data-control-prev="<span class='mif-chevron-left fg-cyan'></span>"
+                     class="slide-cover"
+                     data-height=100%
+                >
+{#                    <div class="slide p-2 pl-10 pr-10" data-cover="{% static 'seminars/data-science.jpg' %}">#}
+{#                        <a href="" class="more">... ادامه ی مطلب</a>#}
+{#                        <div class="row flex-align-center h-100">#}
+{#                            <div class="cell-md-8"></div>#}
+{#                            <div class="cell-md-4 text-center">#}
+{#                                <div class="img-container drop-shadow"></div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="slide-glass"></div>#}
+{#                    <div class="slide p-2 pl-10 pr-10" data-cover="{% static 'seminars/git.jpg' %}">#}
+{#                        <a href="" class="more">... ادامه ی مطلب</a>#}
+{#                        <div class="row flex-align-center h-100">#}
+{#                            <div class="cell-md-8"></div>#}
+{#                            <div class="cell-md-4 text-center">#}
+{#                                <div class="img-container drop-shadow"></div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="slide p-2 pl-10 pr-10" data-cover="{% static 'seminars/gomanesh.jpg' %}">#}
+{#                        <a href="" class="more">... ادامه ی مطلب</a>#}
+{#                        <div class="row flex-align-center h-100">#}
+{#                            <div class="cell-md-8"></div>#}
+{#                            <div class="cell-md-4 text-center">#}
+{#                                <div class="img-container drop-shadow"></div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+        <div class="big-box">
+            <div class="box-row box-a">
+                <div class="mosabeghat">
+                    <a href="{% url 'contests' %}" class="a">
+                        <span class="glass"></span>
+                        <i class="text">مسابقات</i>
+                        <img src="{% static 'images/icons/contests.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="jashn">
+                    <a href="{% url 'celebrations' %}" target="_blank">
+                        <span class="glass"></span>
+                        <i class="text">جشن ها</i>
+                        <img src="{% static 'images/icons/celebrations.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="box-row box-b">
+                <div class="seminar-kargah">
+                    <a href="{% url 'seminars' %}" target="_blank">
+                        <span class="glass"></span>
+                        <i class="text">سمینار و کارگاه </i>
+                        <img src="{% static 'images/icons/seminars.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="dorehami">
+                    <a href="" target="_blank">
+                        <span class="glass"></span>
+                        <i class="text">دورهمی</i>
+                        <img src="{% static 'images/icons/gatherings.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="big-box-responsive">
+            <div class="jashn">
+                <a href="" target="_blank">
+                    <span class="glass"></span>
+                    <i class="text">جشن ها</i>
+                    <img src="{% static 'images/icons/celebrations.png' %}" alt="">
+                </a>
+            </div>
+            <div class="mosabeghat">
+                <a href="" target="_blank">
+                    <span class="glass"></span>
+                    <i class="text">مسابقات</i>
+                    <img src="{% static 'images/icons/contests.png' %}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row row-2">
+    <div class="about-contact">
+        <div class="about-us">
+            <a href="" target="_blank">
+                <span class="glass"></span>
+                <i class="text">درباره ی ما</i>
+                <img src="{% static 'images/icons/cute-about-us.png' %}" alt="">
+            </a>
+        </div>
+        <div class="contact-us">
+            <a href="" target="_blank">
+                <span class="glass"></span>
+                <i class="text">ارتباط با ما</i>
+                <img src="{% static 'images/icons/contact.png' %}" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="pardazeh-p harkat-p">
+        <div class="pardazeh">
+            <a href="{% url 'pardazeh' %}">
+                <span class="glass"></span>
+                <i class="text"> نشریه ی پردازه </i>
+                <img src="{% static 'images/icons/pardazeh.png' %}" alt="">
+            </a>
+        </div>
+        <div class="harkat">
+            <a href="" target="_blank">
+                <span class="glass"></span>
+                <i class="text">جشنواره ی حرکت</i>
+                <img src="{% static 'images/icons/harekat.png' %}" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+</body>
+</html>

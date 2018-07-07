@@ -1,0 +1,11 @@
+.container {
+    margin: 14vh auto;
+    padding: 20px;
+    background-color: rgba(108, 206, 209, 0.9);
+}
+
+.img {
+    width: 30%;
+    margin: 0 30px;
+    background-color: rgba(0, 0, 0, 0.29);
+}

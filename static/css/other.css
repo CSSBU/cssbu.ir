@@ -1,0 +1,422 @@
+body {
+/*    background-size: contain;*/
+/*
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.41)) url(../images/photo-1.jpg) ;
+	background-size: cover;
+	background-repeat: repeat;
+*/
+	background-color: #140f0f;
+}
+
+.container {
+    width: 80%;
+    position: relative;
+    /*	background-repeat: no-repeat;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.menu- {
+    width: 100%;
+    height: 80px;
+   background-color:  rgba(224, 178, 56, 0.94);
+    position: fixed;
+    z-index: 120;
+    top: 0;
+}
+
+.logo {
+    width: 90px;
+    height: 90%;
+    top: 5%;
+    position: absolute;
+    left: 11%;
+    background: url(../images/%D9%84%D9%88%DA%AF%D9%88%DB%8C%20%D8%A7%D9%86%D8%AC%D9%85%D9%86%20%D8%B9%D9%84%D9%85%DB%8C.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+/*    border-radius: 50%;*/
+/*    background-color: black;*/
+}
+
+.menu-burg {
+    width: 60px;
+    height: 60px;
+    /*	background-color: aliceblue;*/
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    /*	background-color: aliceblue;*/
+    z-index: 10;
+}
+
+.menu-title {
+    direction: rtl;
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    right: 10%;
+    font-size: 30px;
+	margin-right: 120px;
+    line-height: 80px;
+	font-weight: bold;
+}
+
+#menu-b {
+    position: absolute;
+    right: 0;
+    display: none;
+	z-index: 100;
+}
+
+#menu-b:checked ~ .menu-box {
+    display: block;
+    right: 0;
+}
+
+.menu- .menu-box {
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.83);
+    position: absolute;
+    right: -100%;
+    display: block;
+    padding: 50px;
+    transition: 0.2s;
+	z-index: 80;
+}
+
+#menu-b:checked ~ .menu-burg {
+    top: 20px;
+	z-index: 120;
+}
+
+#menu-b:checked ~ .menu-burg > .menu-line{
+	
+	background-color: white;
+}
+
+#menu-b:checked ~ .menu-burg > .menu-line:first-child {
+    transform: translate(0, 8px) rotate(45deg);
+    transform-origin: center;
+    transition-duration: 100ms;
+}
+
+#menu-b:checked ~ .menu-burg > .menu-line:nth-child(2) {
+    display: none;
+}
+
+#menu-b:checked ~ .menu-burg > .menu-line:last-child {
+    transform: translate(0, -8px) rotate(-45deg);
+    transform-origin: center;
+    transition-duration: 100ms;
+}
+
+.menu-box ul {
+    margin-top: 60px;
+    text-align: right;
+}
+
+.menu-line {
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    display: block;
+    margin-top: 8px;
+}
+
+.menu-box .menu-item {
+    margin-top: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.menu-item a {
+    color: #FFF;
+}
+
+.menu-item a:hover {
+    color: #61BABD;
+}
+
+.contain {
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(108, 206, 209, 0.9);
+    margin: 20px 0;
+    position: relative;
+    color: aliceblue;
+}
+
+.contain .img {
+    height: 90%;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.29);
+    position: absolute;
+    left: 12vh;
+    top: 4vh;
+    overflow: hidden;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(67, 56, 18, 0.45);
+    position: absolute;
+    top: 0;
+}
+
+.img-hover {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(67, 63, 59, 0.69);
+    position: absolute;
+    top: -100%;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.img-hover a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.a-box {
+    padding: 20px;
+    border: 1px solid white;
+    line-height: 60vh;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.img:hover .img-hover {
+    display: block;
+    top: 0;
+}
+
+.contain .text {
+    width: 58%;
+    height: 90%;
+    position: absolute;
+    /*	background-color: rgba(0, 0, 0, 0.29);*/
+    right: 4vh;
+    top: 4vh;
+    text-align: right;
+    font-size: 18px;
+    padding: 20px;
+    color: black;
+}
+
+
+.even .text {
+    left: 4vh;
+    top: 4vh;
+}
+
+.even .img {
+    left: 65%;
+    top: 4vh;
+}
+
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.container{
+	
+/*	background-color: aliceblue;*/
+	margin: 0 auto;
+}
+
+.container .img-para {
+	
+	width: 100%;
+	min-height: 100px;
+	background-color: rgba(97, 186, 189, 0.94);
+	margin: 100px auto;
+	float: left;
+	clear: both;
+
+}
+
+.img-para img{
+	
+	width: 34%;
+/*	height: 600px;*/
+	float: left;
+	margin-left: 50px;
+	margin-top: 50px;
+
+	
+}
+
+.img-para .paragraph{
+	
+	width: 50%;
+/*	background-color: yellow;*/
+	float: right;
+	text-align: right;
+	line-height: 30px;
+	padding: 40px;
+	padding-left: 0;
+}
+
+.paragraph ul{
+	list-style: none;
+	
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .menu-title {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: right;
+		margin-right: 50px;
+        /*height: 2vh;*/
+    }
+	
+	.menu-{
+		
+		position: absolute;
+		z-index: 10;
+	}
+
+    .menu-burg .menu-line {
+        width: 40px;
+/*        height: 4px;*/
+        background-color: black;
+        margin-top: 4px;
+    }
+
+    .menu-burg {
+        top: 20%;
+        right: 10px;
+    }
+	
+/*
+	.menu-box{
+		
+		width: 200px;
+	}
+*/
+	.menu-box {
+	width: 10px;
+}
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .contain {
+        width: 80%;
+        padding: 0 50%;
+        margin-top: 80px;
+        background-color: transparent;
+    }
+
+    .contain .text {
+        font-size: 10px;
+        width: 100%;
+        height: 60%;
+        left: 0;
+        top: 40%;
+        background-color: rgba(240, 248, 255, 0.63);
+        line-height: 8px;
+        color: black;
+    }
+
+    .text h3 {
+        font-size: 14px;
+    }
+
+    .contain .img {
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    .contain .img, .contain .text {
+        margin: 20px auto;
+		
+    }
+	
+	.img-para .paragraph{
+	
+		width: 100%;
+}
+	.img-para .img {
+	
+		width: 80%;
+}
+
+}
+
+@media screen and (min-width: 701px) and (max-width: 1100px) {
+
+    .contain .text {
+        font-size: 14px;
+        /*background-color: black;*/
+        width: 50%;
+    }
+
+    .contain .img {
+        left: 4vh;
+        width: 36%;
+        height: 80%;
+        top: 10%;
+    }
+	
+	.logo{
+		
+		width: 60px;
+		height: 60px;
+		top: 2%;
+	}
+
+    .even .img {
+        left: 59%;
+    }
+
+    .even .text {
+        margin-right: 30px;
+        /*background-color: black;*/
+    }
+
+    .menu-title {
+        font-size: 26px;
+        font-weight: bold;
+		margin-right: 120px;
+    }
+	
+	.img-para .paragraph{
+	
+		width: 40%;
+}
+	.img-para .img {
+	
+		width: 45%;
+		margin-left: 30px;
+}
+	
+	.menu-{
+		
+		position: absolute;
+	}
+}
