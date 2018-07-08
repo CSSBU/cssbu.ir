@@ -17,9 +17,9 @@
     <div class="logo-news">
         <div class="logo">
             <div class="logo-img">
-                <img src="{% static 'images/logo.png' %}" alt="">
+                <img src="{% static 'images/logo.png' %}" alt="انجمن دانشجویی علوم کامپیوتر دانشگاه شهید بهشتی">
             </div>
-            <div class="logo-txt">انجمن علمی علوم کامپیوتر <span>دانشگاه شهید بهشتی </span></div>
+            <div class="logo-txt">انجمن علمی علوم کامپیوتر<span>دانشگاه شهید بهشتی</span></div>
         </div>
         <div class="news"></div>
     </div>
@@ -94,7 +94,7 @@
                     </a>
                 </div>
                 <div class="dorehami">
-                    <a href="">
+                    <a href="{% url 'gatherings' %}">
                         <span class="glass"></span>
                         <i class="text">دورهمی</i>
                         <img src="{% static 'images/icons/gatherings.png' %}" alt="">
@@ -104,14 +104,14 @@
         </div>
         <div class="big-box-responsive">
             <div class="jashn">
-                <a href="">
+                <a href="{% url 'celebrations' %}">
                     <span class="glass"></span>
                     <i class="text">جشن ها</i>
                     <img src="{% static 'images/icons/celebrations.png' %}" alt="">
                 </a>
             </div>
             <div class="mosabeghat">
-                <a href="">
+                <a href="{% url 'contests' %}">
                     <span class="glass"></span>
                     <i class="text">مسابقات</i>
                     <img src="{% static 'images/icons/contests.png' %}" alt="">
