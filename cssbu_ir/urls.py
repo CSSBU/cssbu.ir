@@ -8,13 +8,13 @@ urlpatterns = [
 
 	path('', TemplateView.as_view(template_name='index.html'), name='main'),
 
-	path('about', TemplateView.as_view(template_name='about-us.html'), name='about-us'),
-	path('contact', TemplateView.as_view(template_name='contact-us.html'), name='contact-us'),
+	path('about', TemplateView.as_view(template_name='about-us.html'), name='about-us', kwargs={'title': 'درباره ی ما'}),
+	path('contact', TemplateView.as_view(template_name='contact-us.html'), name='contact-us', kwargs={'title': 'ارتباط با ما'}),
 
-	path('contests', TemplateView.as_view(template_name='contests.html'), name='contests'),
-	path('gatherings', TemplateView.as_view(template_name='gatherings.html'), name='gatherings'),
-	path('celebrations', TemplateView.as_view(template_name='celebrations.html'), name='celebrations'),
-	path('seminars', TemplateView.as_view(template_name='seminars.html'), name='seminars'),
+	path('contests', TemplateView.as_view(template_name='contests.html'), name='contests', kwargs={'title': 'مسابقات'}),
+	path('gatherings', TemplateView.as_view(template_name='gatherings.html'), name='gatherings', kwargs={'title': 'دورهمی ها'}),
+	path('celebrations', TemplateView.as_view(template_name='celebrations.html'), name='celebrations', kwargs={'title': 'جشن ها'}),
+	path('seminars', TemplateView.as_view(template_name='seminars.html'), name='seminars', kwargs={'title': 'سمینار ها و کارگاه ها'}),
 
 	path('pardazeh/', include('pardazeh.urls'))
 ]
