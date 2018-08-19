@@ -14,7 +14,7 @@ urlpatterns = [
 	path('contests', TemplateView.as_view(template_name='contests.html'), name='contests', kwargs={'title': 'مسابقات'}),
 	path('gatherings', TemplateView.as_view(template_name='gatherings.html'), name='gatherings', kwargs={'title': 'دورهمی ها'}),
 	path('celebrations', TemplateView.as_view(template_name='celebrations.html'), name='celebrations', kwargs={'title': 'جشن ها'}),
-	path('seminars', TemplateView.as_view(template_name='seminars.html'), name='seminars', kwargs={'title': 'سمینار ها و کارگاه ها'}),
 
-	path('pardazeh/', include('pardazeh.urls'))
+	path('pardazeh/', include('pardazeh.urls')),
+	path('activities/', include('activities.urls')),
 ]

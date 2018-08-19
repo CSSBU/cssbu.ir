@@ -4,7 +4,7 @@ from django.db import models
 class Magazine(models.Model):
 	number = models.IntegerField()
 	published_date = models.DateField()
-	uploaded_date = models.DateField(auto_now=True)
+	uploaded_date = models.DateField(auto_now_add=True, editable=False)
 
 	cover_picture = models.ImageField(upload_to='pardazeh/covers/')
 	contents = models.TextField()

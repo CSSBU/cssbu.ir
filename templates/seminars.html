@@ -2,31 +2,19 @@
 {% block body %}
 <div class="container">
     <div class="container-cover"></div>
-
-    <div class="contain">
+    {% for seminar in object_list %}
+    <div class="contain{% cycle '' ' even' %}">
         <div class="img">
-            <img src="" alt="">
+            <img src="{{ seminar.poster }}" alt="">
             <div class="img-hover"><a href="">
-                <span class="a-box">... ادامه مطلب</span>
+                <span class="a-box">...ادامه مطلب</span>
             </a></div>
         </div>
         <div class="text">
             <h3><a href=""></a></h3>
-
-            <p>ارزشمندترین منبع دنیا دیگر نفت نیست، داده‌ است!</p>
+            <p>{{ seminar.short_description | linebreaksbr }}</p>
         </div>
     </div>
-
-    <div class="contain even">
-        <div class="img">
-            <img src="" alt="">
-            <div class="img-hover"><a href="">
-                <span class="a-box">... ادامه مطلب</span>
-            </a></div>
-        </div>
-        <div class="text">
-            <h3><a href=""></a></h3>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}
