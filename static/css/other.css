@@ -203,7 +203,7 @@ a:hover {
     /*background-color: rgba(0, 0, 0, 0.29);*/
     right: 4vh;
     top: 4vh;
-    text-align: right;
+    direction: rtl;
     font-size: 18px;
     padding: 20px;
     color: black;
