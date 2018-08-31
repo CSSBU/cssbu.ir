@@ -46,9 +46,9 @@
     {% for pardazeh in object_list reversed %}
     <div class="contain{% cycle '' ' even' %}">
         <div class="img">
-            <img src="/static/{{ pardazeh.cover_picture }}" alt="پردازه ی شماره ی {{ pardazeh.number }}">
+            <img src="/media/{{ pardazeh.cover_picture }}" alt="پردازه ی شماره ی {{ pardazeh.number }}">
             <div class="img-hover">
-                <a href="/static/{{ pardazeh.file }}"><span class="a-box">دانلود پردازه شماره {{ pardazeh.number }}<i class="fa fa-download fa-large"></i></span></a>
+                <a href="/media/{{ pardazeh.file }}"><span class="a-box">دانلود پردازه شماره {{ pardazeh.number }}<i class="fa fa-download fa-large"></i></span></a>
             </div>
         </div>
         <div class="text">
