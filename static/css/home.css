@@ -9,12 +9,10 @@
 body {
     display: flex;
     flex-direction: column;
-    background: url(../images/rep.jpg);
-    background-repeat: repeat;
     background-size: contain;
-    /*	background-position: center;*/
-    background-attachment: fixed;
-    /*	background:linear-gradient(to bottom , #414040 , black);*/
+    /*background-position: center;*/
+    background: url(../images/rep.jpg) repeat fixed;
+    /*background:linear-gradient(to bottom , #414040 , black);*/
 }
 
 div a {
@@ -65,12 +63,12 @@ i {
     font-style: normal;
 }
 
-.contact-us, .about-us, .dorehami, .mosabeghat, .seminar-kargah, .harkat, .jashn, .pardazeh {
+.contact-us, .about-us, .dorehami, .mosabeghat, .seminar-kargah, .harekat, .jashn, .pardazeh {
     position: relative;
     overflow: hidden;
 }
 
-.about-us img, .dorehami img, .contact-us img, .mosabeghat img, .seminar-kargah img, .harkat img, .jashn img, .pardazeh img {
+.about-us img, .dorehami img, .contact-us img, .mosabeghat img, .seminar-kargah img, .harekat img, .jashn img, .pardazeh img {
     width: 80px;
     height: 80px;
     position: absolute;
@@ -123,31 +121,30 @@ a .text {
     height: 100%;
     display: block;
     border-radius: 20px;
-    /*	background: linear-gradient(to right , rgba(26, 177, 196, 0.82) , rgba(221, 123, 63, 0.81));*/
-
+    /*background: linear-gradient(to right , rgba(26, 177, 196, 0.82) , rgba(221, 123, 63, 0.81));*/
     background-color: rgba(196, 73, 73, 0.91);
     position: absolute;
     left: -100%;
     top: 0;
+    transition: 0.5s;
 }
 
-.about-us:hover .glass, .dorehami:hover .glass, .contact-us:hover .glass, .mosabeghat:hover .glass, .seminar-kargah:hover .glass, .harkat:hover .glass, .jashn:hover .glass, .pardazeh:hover .glass {
+.transitioned-button:hover .glass {
     left: 0;
     transition: 0.5s;
 }
 
-.about-us, .dorehami, .contact-us, .mosabeghat, .seminar-kargah, .harkat, .jashn, .pardazeh {
+.about-us, .dorehami, .contact-us, .mosabeghat, .seminar-kargah, .harekat, .jashn, .pardazeh {
     overflow: hidden;
 }
 
 /*
-@keyframes go{
-	
-	from{
+@keyframes go {
+	from {
 		background: linear-gradient(to right , rgba(105, 206, 183, 0.82) , rgba(221, 123, 63, 0.81));
 	}
-	
-	to{
+
+	to {
 		background: linear-gradient(to right , blue , red);
 	}
 }
@@ -159,12 +156,12 @@ a .text {
     flex-direction: column;
     justify-content: space-between;
     padding: 30px 30px 0 30px;
-    /*	margin-left: 5vh;*/
-    /*	background-color: green;*/
+    /*margin-left: 5vh;*/
+    /*background-color: green;*/
 }
 
 .logo {
-    /*	margin-top: 5vh;*/
+    /*margin-top: 5vh;*/
     width: 100%;
     height: 45%;
     background-color: rgba(212, 212, 109, 0.89);
@@ -175,8 +172,8 @@ a .text {
 .logo .logo-img {
     width: 110px;
     height: 110px;
-    /*	background-color: black;*/
-    /*	border-radius: 50%;*/
+    /*background-color: black;*/
+    /*border-radius: 50%;*/
     overflow: hidden;
     margin-top: 6vh;
     padding: 0;
@@ -202,7 +199,7 @@ a .text {
 
 .news {
     width: 100%;
-    /*	margin-top: 5vh;*/
+    /*margin-top: 5vh;*/
     height: 45%;
     background-color: rgba(78, 170, 172, 0.91);
 }
@@ -210,7 +207,7 @@ a .text {
 .half-box-responsive {
     width: 100%;
     height: 30%;
-    /*	background-color:rgba(87, 83, 83, 0.79)rgba(87, 83, 83, 0.79);*/
+    /*background-color:rgba(87, 83, 83, 0.79)rgba(87, 83, 83, 0.79);*/
     z-index: 100;
     margin-top: 5%;
     display: none;
@@ -229,7 +226,7 @@ a .text {
     height: 66.6666vh;
     display: flex;
     flex-direction: row;
-    /*	background-color: yellow;*/
+    /*background-color: yellow;*/
 }
 
 .slider- {
@@ -249,7 +246,7 @@ a .text {
 .big-box {
     width: 55%;
     height: 100%;
-    /*	background-color: oldlace;*/
+    /*background-color: oldlace;*/
     display: flex;
     flex-direction: column;
     margin-left: 30px;
@@ -258,30 +255,30 @@ a .text {
 .big-box .box-row {
     width: 100%;
     height: 50%;
-    /*	background-color: pink;*/
-    /*	margin-top: 10px;*/
+    /*background-color: pink;*/
+    /*margin-top: 10px;*/
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
 .big-box .b {
-    /*	margin-top: 10px;*/
+    /*margin-top: 10px;*/
 }
 
 .box-row div {
     width: 46%;
     height: 94%;
-    /*	margin: 10px;*/
+    /*margin: 10px;*/
     background-color: rgba(78, 170, 172, 0.91);
 }
 
 .big-box-responsive {
     width: 38%;
     height: 100%;
-    /*	background-color: rgba(0, 0, 0, 0.81);*/
+    /*background-color: rgba(0, 0, 0, 0.81);*/
     display: none;
-    /*	z-index: 10;*/
+    /*z-index: 10;*/
 }
 
 .big-box-responsive .jashn, .big-box-responsive .mosabeghat {
@@ -299,16 +296,15 @@ a .text {
     display: flex;
     justify-content: space-between;
     height: 33vh;
-    /*	background-color: red;*/
+    /*background-color: red;*/
     padding: 30px;
 }
 
 .pardazeh-p {
     width: 60%;
     height: 33vh;
-    /*	background-color: yellow;*/
-    padding: 32px;
-    padding-left: 0;
+    /*background-color: yellow;*/
+    padding: 32px 32px 32px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -319,11 +315,11 @@ a .text {
     background-color: rgba(78, 170, 172, 0.91);
 }
 
-.harkat {
+.harekat {
     width: 53%;
     height: 100%;
     background-color: rgba(212, 212, 109, 0.89);
-    /*	background-color: pink;*/
+    /*background-color: pink;*/
 }
 
 .contact-us, .about-us {
@@ -341,13 +337,12 @@ a .text {
 }
 
 @media screen and (max-width: 720px) {
-
     div i {
         font-size: 14px;
         font-weight: bold;
     }
 
-    .about-us img, .dorehami img, .contact-us img, .mosabeghat img, .seminar-kargah img, .harkat img, .jashn img, .pardazeh img {
+    .about-us img, .dorehami img, .contact-us img, .mosabeghat img, .seminar-kargah img, .harekat img, .jashn img, .pardazeh img {
         width: 40px;
         height: 40px;
     }
@@ -357,7 +352,7 @@ a .text {
     }
 
     .row-1 {
-        /*	background-color: teal;*/
+        /*background-color: teal;*/
         height: 200vh;
         padding: 0;
     }
@@ -407,8 +402,7 @@ a .text {
         /*margin-left:  3%;*/
         flex-direction: column;
         margin: 0;
-        padding: 4vh;
-        padding-top: 6vh;
+        padding: 6vh 4vh 4vh;
     }
 
     .slider- {
@@ -466,7 +460,7 @@ a .text {
         height: 50%;
     }
 
-    .harkat {
+    .harekat {
         width: 100%;
         margin-top: 4vh;
         height: 50%;
@@ -481,11 +475,9 @@ a .text {
         height: 80%;
         width: 46%;
     }
-
 }
 
 @media screen and (min-width: 721px) and (max-width: 1200px) {
-
     .row {
         flex-wrap: wrap;
     }
@@ -499,7 +491,7 @@ a .text {
         font-size: 16px;
     }
 
-    .about-us img, .dorehami img, .contact-us img, .mosabeghat img, .seminar-kargah img, .harkat img, .jashn img, .pardazeh img {
+    .about-us img, .dorehami img, .contact-us img, .mosabeghat img, .seminar-kargah img, .harekat img, .jashn img, .pardazeh img {
         width: 40px;
         height: 40px;
     }
@@ -510,8 +502,7 @@ a .text {
 
     .logo {
         height: 30%;
-        padding: 0;
-        padding-left: 4vh;
+        padding: 0 0 0 4vh;
     }
 
     .logo .logo-img {
@@ -576,7 +567,6 @@ a .text {
     .big-box-responsive .jashn, .big-box-responsive .mosabeghat {
         height: 48%;
     }
-
 }
 
 
