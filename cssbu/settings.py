@@ -34,7 +34,7 @@ MIDDLEWARE = [
 	# 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'cssbu_ir.urls'
+ROOT_URLCONF = 'cssbu.urls'
 
 TEMPLATES = [
 	{
@@ -52,7 +52,7 @@ TEMPLATES = [
 	},
 ]
 
-WSGI_APPLICATION = 'cssbu_ir.wsgi.application'
+WSGI_APPLICATION = 'cssbu.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -78,7 +78,7 @@ USE_TZ = True
 
 # STATICFILES_DIRS = [
 # 	'static/',
-# 	'storage/',
+# 	'media/',
 # ]
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'

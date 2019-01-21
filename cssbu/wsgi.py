@@ -1,5 +1,5 @@
 """
-WSGI config for cssbu_ir project.
+WSGI config for cssbu.ir project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cssbu_ir.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cssbu.settings")
 
 application = get_wsgi_application()
