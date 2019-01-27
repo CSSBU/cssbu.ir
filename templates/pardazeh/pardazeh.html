@@ -1,62 +1,212 @@
 <!DOCTYPE html>
 <html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <title>نشریه ی پردازه</title>
+    <head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>انجمن دانشجویی علوم کامپیوتر دانشگاه شهید بهشتی</title>
 
-    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/plugins/IranSans/css/fontstyle.css">
-    <link rel="stylesheet" href="/static/css/home.css">
-    <link rel="stylesheet" href="/static/css/other.css">
-    <link rel="stylesheet" href="/static/css/pardazeh.css">
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width initial-scale=1.0">
+        
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+        <script src="js/back-sketch.js"></script> -->
+        
+        <link rel="icon" href="">
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.css">
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro.min.css">
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-colors.min.css">
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-rtl.min.css">
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-icons.min.css">
+        
+        <link rel="stylesheet" href="css/myicon.css">
+        <link rel="stylesheet" href="css/basics.css">
 
-<body>
-<nav>
-    <div class="menu-">
-        <div class="logo"></div>
-        <div class="menu-title">نشریه ی پردازه</div>
-        <input type="checkbox" id="menu-b">
-        <label for="menu-b" class="menu-burg">
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-            <span class="menu-line"></span>
-        </label>
-        <div class="menu-box">
-            <ul class="menu-ul">
-                <li class="menu-item">
-                    <a href="/">خانه</a>
-                </li>
-                <li class="menu-item">
-                    <a href="">تماس با ما</a>
-                </li>
-                <li class="menu-item">
-                    <a href="">درباره ی ما</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+        <style>
+            
+            @font-face {
+                font-family: ghasem;
+                src: url("fonts/AGhasem.ttf");
+            }
 
-<div class="container">
-    <div class="container-cover"></div>
-    {% for pardazeh in object_list %}
-    <div class="contain{% cycle '' ' even' %}">
-        <div class="img">
-            <img src="/media/{{ pardazeh.cover_picture }}" alt="پردازه ی شماره ی {{ pardazeh.number }}">
-            <div class="img-hover">
-                <a href="/media/{{ pardazeh.file }}"><span class="a-box">دانلود پردازه شماره {{ pardazeh.number }}<i class="fa fa-download fa-large"></i></span></a>
+            @font-face{
+                font-family: intel;
+                src: url("fonts/Intel Clear Arabic Light.ttf");
+                src: url("fonts/Intel Clear Arabic regular.ttf");
+                src: url("fonts/IntelClear_Bd.ttf");
+                src: url("fonts/IntelClear_BdIt.ttf");
+                src: url("fonts/IntelClearPro_Bd.ttf");
+            }
+
+            html{
+                font-family: ghasem, intel;
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+        <div data-role="navview" data-compact="fs">
+            
+            <div class="navview-pane">
+                   
+                <button class="pull-button">
+                    <span class="mif-menu"></span>
+                </button>
+
+                <div class="suggest-box">
+                        <input type="text" data-role="input" data-clear-button="false" data-search-button="true">
+                        <button class="holder">
+                            <span class="mif-search"></span>
+                        </button>
+                </div>
+            
+                <ul class="navview-menu">
+                        <li class="item-separator"></li>
+                        <li>
+                            <a href="index.html">
+                                <span class="icon"><span class="mif-home"></span></span>
+                                <span class="caption">خانه</span>
+                            </a>
+                        </li>
+                        <li class="item-separator"></li>
+                        <li class="item-header">صفحات اصلی</li>
+                        <li>
+                            <a href="#">
+                                <span class="icon"><span class="mif-apps"></span></span>
+                                <span class="caption">وب اپلیکیشن ها</span>
+                            </a>
+                        </li>
+                        <li class="item-separator"></li>                    
+                        <li>
+                            <a href="pardazeh.html">
+                                <span class="icon"><span class="mi-pardaze"></span></span>
+                                <span class="caption">نشریه پردازه</span>
+                            </a>
+                        </li>
+                        <li class="item-separator"></li>                    
+                        <li>
+                            <a href="gatherings.html">
+                                <span class="icon"><span class="mi-dorehami"></span></span>
+                                <span class="caption">دورهمی ها</span>
+                            </a>
+                        </li>
+                        <li class="item-separator"></li>                    
+                        <li>
+                            <a href="contests.html">
+                                <span class="icon"><span class="mi-mosabeghat"></span></span>
+                                <span class="caption">مسابقات</span>
+                            </a>
+                        </li>
+                        <li class="item-separator"></li>                    
+                        <li>
+                            <a href="seminars.html">
+                                <span class="icon"><span class="mi-seminar"></span></span>
+                                <span class="caption">سمینار ها و کارگاه ها</span>
+                            </a>
+                        </li>
+                        <li class="item-separator"></li>                    
+                        <li>
+                            <a href="celebrations.html">
+                                <span class="icon"><span class="mi-jashnha"></span></span>
+                                <span class="caption">جشن ها</span>
+                            </a>
+                        </li>
+                        <li class="item-separator"></li>                    
+                        <li>
+                            <a href="contact-us.html">
+                                <span class="icon"><span class="mi-ertebat"></span></span>
+                                <span class="caption">ارتباط با ما</span>
+                            </a>
+                        </li>
+                </ul>
+            
             </div>
+
+            <div class="navview-content" id="container" dir="rtl">
+
+                <h1 style="padding-top: 20px; padding-right:20px; direction: rtl">نشریه پردازه</h1>
+                <div class="scrolling-wrapper-parent">
+                    <div class="card-parent">
+                        <div class="scrolling-wrapper">
+                            <div class="card">
+                                <h6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"</h6>
+                            </div>
+                            <div class="card">
+                                <h6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat cupidatat non proiden
+                                t, sunt in culpa qui officia deserunt mollit anim id est laborum."</h6>
+                            </div>
+                            <div class="card">
+                                    <h6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"</h6>
+                                </div>
+                            <div class="card">
+                                <h6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat cupidatat non proiden
+                                t, sunt in culpa qui officia deserunt mollit anim id est laborum."</h6>
+                            </div>
+                            <div class="card">
+                                    <h6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur. Excepteur sint occaecat cupidatat non proiden
+                                    t, sunt in culpa qui officia deserunt mollit anim id est laborum."</h6>
+                            </div>
+                            <div class="card">
+                                    <h6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur. Excepteur sint occaecat cupidatat non proiden
+                                    t, sunt in culpa qui officia deserunt mollit anim id est laborum."</h6>
+                            </div>
+                        </div>
+                        <div class="scrolling-wrapper">
+                                <div class="card">
+                                    <h6>"reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                     nulla pariatur. Excepteur sint occaecat cupidatat non proiden
+                                     t, sunt in culpa qui officia deserunt mollit anim id est laborum."</h6>
+                                </div>
+                                <div class="card">
+                                    <h6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla pariatur. Excepteur sint occaecat cupidatat non proiden
+                                    t, sunt in culpa qui officia deserunt mollit anim id est laborum."</h6>
+                                </div>
+                                <div class="card">
+                                    <h6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </h6>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+
         </div>
-        <div class="text">
-            <h3>پردازه ی شماره ی {{ pardazeh.number }}</h3>
-            <p>{{ pardazeh.contents | linebreaksbr }}</p>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-</body>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    </body>
+
 </html>
