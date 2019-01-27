@@ -1,0 +1,56 @@
+html, body{
+    font-size: 20px;
+    font-family: ghasem, intel;
+    color: antiquewhite;
+    height: 100%;
+    list-style: none;
+}
+
+.navview-content{
+    line-height: 1;
+}
+
+.slide{
+    overflow: hidden;
+    text-shadow: 3px 3px rgba(250, 255, 255, 0.5);
+}
+
+.titr-style{
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    color:black;
+    background-color: rgba(250, 235, 215, 0.5)
+}
+
+.scrolling-wrapper-parent {
+    padding-left: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-wrapper{    
+    white-space: nowrap;
+}
+
+.card-parent{
+    padding-right: 20px;
+    display: inline-block;
+    background: rgba(237, 237, 238, 0.151);
+    white-space: normal;
+}
+
+.card{
+    padding: 20px;
+    display: inline-block;
+    background: rgba(16, 16, 245, 0.685);
+    white-space: normal;
+}
+
+::-webkit-scrollbar {
+    /* width: 0px;  remove scrollbar space */
+    background: transparent;
+}
